@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerEstable">
+   <children>
+      <SplitPane dividerPositions="0.4397993311036789" layoutX="10.0" layoutY="9.0" prefHeight="409.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="276.0">
+               <children>
+                  <GridPane layoutX="7.0" layoutY="14.0" prefHeight="239.0" prefWidth="200.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="129.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="97.0" text="Codi-Estable" GridPane.rowIndex="1" />
+                        <Label prefHeight="26.0" prefWidth="97.0" text="Nom-Estable" GridPane.rowIndex="3" />
+                        <Label prefHeight="26.0" prefWidth="97.0" text="Quantitat" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtCodiEstable" prefHeight="25.0" prefWidth="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtNomEstable" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtQuantitat" layoutX="81.0" layoutY="138.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="8.0" layoutY="276.0" prefHeight="26.0" prefWidth="244.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarRegistreEstable" prefWidth="63.0" text="Guardar" />
+                        <Button fx:id="btnModificar" disable="true" mnemonicParsing="false" onAction="#modificarRegistreEstable" text="Modificar" />
+                        <Button fx:id="btnEliminar" disable="true" mnemonicParsing="false" onAction="#eliminarRegistreEstable" text="Eliminar" />
+                        <Button fx:id="btnNou" mnemonicParsing="false" onAction="#resetComponents" text="Nou" />
+                     </children>
+                  </HBox>
+                  <Button layoutX="104.0" layoutY="333.0" mnemonicParsing="false" onAction="#cambiarScenaAnimals" text="Animals" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tblViewEstable" layoutX="14.0" layoutY="43.0" prefHeight="398.0" prefWidth="330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="clmnCodiEstable" prefWidth="110.0" text="Codi-Estable" />
+                        <TableColumn fx:id="clmnNomEstable" prefWidth="110.0" text="Nom-Estable" />
+                        <TableColumn fx:id="clmnQuantitat" prefWidth="110.0" text="Quantitat" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
